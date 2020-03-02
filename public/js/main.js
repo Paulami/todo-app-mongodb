@@ -57,8 +57,8 @@ class Todos {
   /**
    * updateTodo
    * PUT
-   * @param {*} id 
-   * @param {*} newData 
+   * @param {*} id
+   * @param {*} newData
    */
   async updateTodo(id, newData) {
     try {
@@ -81,7 +81,7 @@ class Todos {
   /**
    * deleteTodo
    * DELETE
-   * @param {*} id 
+   * @param {*} id
    */
   async deleteTodo(id) {
     try {
@@ -116,8 +116,12 @@ class Todos {
           <form class="todo-item__form">
             <input type="text" name="todo" value="${item.todo}">
             <select name="status">
-              <option value="incomplete" ${item.status === "incomplete" ? 'selected' : ''}>incomplete</option>
-              <option value="complete" ${item.status === "complete" ? 'selected' : ''}>complete</option>
+              <option value="incomplete" ${
+                item.status === 'incomplete' ? 'selected' : ''
+              }>incomplete</option>
+              <option value="complete" ${
+                item.status === 'complete' ? 'selected' : ''
+              }>complete</option>
             </select>
           </form>
           <button class="todo-item__delete">delete</button> | <button class="todo-item__edit">edit</button>
@@ -133,7 +137,7 @@ class Todos {
 
   /**
    * handle the edit or delete button
-   * @param {} evt 
+   * @param {} evt
    */
   async handleEditOrDelete(evt) {
     {
